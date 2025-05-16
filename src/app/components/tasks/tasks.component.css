@@ -1,0 +1,81 @@
+#tasks {
+  background-color: var(--primary);
+  border-radius: 8px;
+  max-height: 60vh;
+  overflow: hidden;
+  padding: 1rem;
+}
+
+header {
+  align-items: flex-start;
+  display: flex;
+  gap: 1rem;
+  justify-content: space-between;
+  margin-bottom: 2rem;
+}
+
+h2 {
+  font-size: 0.9rem;
+  margin: 0;
+  text-wrap: balance;
+  width: 60%;
+}
+
+menu {
+  margin: 0;
+  padding: 0;
+}
+
+menu button {
+  background-color: var(--secondary);
+  border: none;
+  border-radius: 4px;
+  color: var(--text);
+  cursor: pointer;
+  font: inherit;
+  font-size: 0.9rem;
+  padding: 0.35rem 0.8rem;
+  transition: all 0.3s ease;
+}
+
+menu button:hover,
+menu button:active {
+  background-color: var(--tertiary);
+}
+
+ul {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  list-style: none;
+  margin: 1rem 0;
+  max-height: 50vh;
+  overflow: auto;
+  padding: 0;
+}
+
+::-webkit-scrollbar {
+  height: 5px;
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--primary);
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--secondary);
+  border-radius: 10px;
+}
+
+
+@media (min-width: 768px) {
+  h2 {
+    font-size: 1.25rem;
+  }
+
+  menu {
+    width: auto;
+  }
+}

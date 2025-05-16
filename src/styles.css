@@ -1,7 +1,7 @@
 :root {
   --primary: #F5F7F8;
   --secondary: #C9CCD5;
-  --tertiary: #C9CCD5;
+  --tertiary: #FFFFFF;
   --text: #27374D;
 
 }
@@ -12,8 +12,12 @@
   padding: 0;
 }
 
+html {
+  height: 100%;
+}
 
 body {
   color: var(--text);
   font-family: "Poppins", sans-serif;
+  height: 100%;
 }

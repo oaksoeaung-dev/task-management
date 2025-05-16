@@ -3,6 +3,7 @@ import {HeaderComponent} from './components/header/header.component';
 import {UserComponent} from './components/user/user.component';
 import {USERS} from '../data/users';
 import {TasksComponent} from './components/tasks/tasks.component';
+import {User} from '../models/user.model';
 
 @Component({
   selector: 'app-root',
@@ -14,9 +15,10 @@ import {TasksComponent} from './components/tasks/tasks.component';
 export class AppComponent {
   users = USERS;
 
-  selectedUserName = signal<string | undefined>(undefined);
+  selectedUser = signal<User | null>(null);
 
   onSelectUser = (id: string) => {
-    this.selectedUserName.set(this.users.find(user => user.id === id)?.name);
+    const user = this.users.find(user => user.id === id);
+    this.selectedUser.set(user ?? null);
   }
 }
